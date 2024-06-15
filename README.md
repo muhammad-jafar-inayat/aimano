@@ -2,11 +2,11 @@
 
 https://github.com/cintra1/ailu/assets/101955322/c6767160-09a7-4e69-8188-a2486cf144bd
 
-## Introdução
+## Introduction
 
-Ailu é uma aplicação de Software-as-a-Service (SaaS) para tratamento de imagens, integrando recursos avançados de IA e um sistema robusto de pagamentos e créditos. Com o Next.js 14 como framework principal, juntamente com Cloudinary AI, Clerk e Stripe. A aplicação oferece uma solução abrangente para manipulação e aprimoramento de imagens, incluindo restauração de imagens, recoloração e remoção de objetos, preenchimento generativo e remoção de fundo. 
+Ailu is a Software-as-a-Service (SaaS) application for image processing, integrating advanced AI features and a robust system for payments and credits. Built on Next.js 14 as the primary framework, along with Cloudinary AI, Clerk, and Stripe, the application provides a comprehensive solution for manipulating and enhancing images, including image restoration, recoloring, object removal, generative filling, and background removal.
 
-## ⚙️ Tecnologias
+## ⚙️ Technologies
 
 - Next.js 14
 - TypeScript
@@ -17,49 +17,52 @@ Ailu é uma aplicação de Software-as-a-Service (SaaS) para tratamento de image
 - Shadcn
 - TailwindCSS
 
-## 🧑‍💻 Funcionalidades
+## 🧑‍💻 Features
 
-- **Autenticação e Autorização:** Acesso seguro do usuário com registro, login e proteção de rotas.
-  
-- **Mostruário de Imagens da Comunidade:** Explore transformações de usuários com navegação fácil usando paginação.
+- **Authentication and authorization**: Secure user access with registration, login and route protection.
 
-- **Busca Avançada de Imagens:** Encontre imagens por conteúdo ou objetos presentes na imagem de forma rápida e precisa.
+- **Community image gallery**: Explore user transformations with easy navigation using pagination.
 
-- **Restauração de Imagem:** Reviva imagens antigas ou danificadas sem esforço.
+- **Advanced image search**: Find images quickly and accurately by content or objects in the image.
 
-- **Recoloração de Imagem:** Personalize imagens substituindo objetos por cores desejadas facilmente.
+- **Image restoration**: Effortlessly recover old or damaged images.
 
-- **Preenchimento Generativo de Imagem:** Preencha áreas ausentes de imagens de forma contínua.
+- **Image recoloring**: Customize images by easily replacing objects with the colors you want.
 
-- **Remoção de Objetos:** Limpe imagens removendo objetos indesejados com precisão.
+- **Generative image filling**: Continuously fill in missing areas in images.
 
-- **Remoção de Fundo:** Extraia objetos de fundos com facilidade.
+- **Object removal**: Clean up images with precision by removing unwanted objects.
 
-- **Download de Imagens Transformadas:** Salve e compartilhe imagens transformadas com IA convenientemente.
+- **Background removal**: Easily extract objects from backgrounds.
 
-- **Detalhes de Imagens Transformadas:** Visualize detalhes das transformações para cada imagem.
+- **Transfer transformed images**: Conveniently save and share transformed images in AI.
 
-- **Gerenciamento de Transformações:** Controle sobre exclusão e atualizações de transformações.
+- **Transformed image details**: View the details of each image's transformation.
 
-- **Sistema de Créditos:** Ganhe ou compre créditos para transformações de imagem.
+- **Transformation management**: Control over deleting and updating transformations.
 
-- **Página de Perfil:** Acesse imagens transformadas e informações de crédito pessoalmente.
+- **Credits system**: Earn or buy credits for image transformations.
 
-- **Compra de Créditos:** Compre créditos de forma segura via Stripe para uso contínuo.
+- **Profile page**: Access personally transformed images and credit information.
 
-- **UI/UX Responsiva:** Uma experiência perfeita em todos os dispositivos com uma interface amigável ao usuário.
+- **Purchase credits**: Secure purchase of credits via Stripe for ongoing use.
 
-## 🤸 Como Começar
+- **Responsive UI/UX**: Perfect experience on all devices with a user-friendly interface.
 
-1. **Instalação:**
-   - Clone este repositório: `git clone https://github.com/cintra1/ailu`
-   - Navegue até o diretório do projeto: `cd ailu`
-   - Instale as dependências: `npm install`
+## 🤸 Getting Started
 
-2. **Configuração:**
-   - Configure suas chaves de API para Cloudinary e Stripe.
-   - Configure as variáveis de ambiente necessárias.
+1. **Installation:**
 
-3. **Executando o Servidor:**
-   - Inicie o servidor Next.js: `npm run dev`
-   - O aplicativo estará disponível em `http://localhost:3000`
+  - Clone this repository: `git clone https://github.com/cintra1/ailu`
+  - Navigate to the project directory: `cd ailu`
+  - Install dependencies: `npm install`
+  - 
+2. **Configuration:**
+
+  - Set up your API keys for Cloudinary and Stripe.
+  - Configure necessary environment variables.
+    
+3. **Running the Server:**
+
+  - Start the Next.js server: `npm run dev`
+  - The application will be available at `http://localhost:3000`
