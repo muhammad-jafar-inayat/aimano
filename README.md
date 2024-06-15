@@ -1,4 +1,4 @@
-# Ailu - Plataforma SaaS de edição de imagem com IA
+# Ailu - SaaS image editing platform with AI
 
 https://github.com/cintra1/ailu/assets/101955322/c6767160-09a7-4e69-8188-a2486cf144bd
 
