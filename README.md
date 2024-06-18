@@ -67,5 +67,5 @@ Ailu is a Software-as-a-Service (SaaS) application for image processing, integra
   - Start the Next.js server: `npm run dev`
   - The application will be available at `http://localhost:3000`
 
-# License:
+## License:
 This project is licensed under the MIT License. See the LICENSE file for details.
