@@ -319,7 +319,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
             className=""
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Enviando...' : 'Save image'}
+            {isSubmitting ? 'Sending...' : 'Save image'}
           </Button>
         </div>
       </form>

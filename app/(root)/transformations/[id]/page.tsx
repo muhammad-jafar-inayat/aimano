@@ -20,7 +20,7 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
 
       <section className="mt-5 flex flex-wrap gap-4">
         <div className="p-14-medium md:p-16-medium flex gap-2">
-          <p className="text-dark-600">Transformação:</p>
+          <p className="text-dark-600">Transformation:</p>
           <p className=" capitalize text-purple-400">
             {image.transformationType}
           </p>
@@ -87,7 +87,7 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
           <div className="mt-4 space-y-4">
             <Button asChild type="button" className="mr-2">
               <Link href={`/transformations/${image._id}/update`}>
-              Atualizar imagem
+              Update image
               </Link>
             </Button>
 

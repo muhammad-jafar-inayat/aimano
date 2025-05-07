@@ -49,7 +49,7 @@ export const InsufficientCreditsModal = () => {
           </AlertDialogTitle>
 
           <AlertDialogDescription className="p-16-regular py-3">
-          But don't worry - you can continue using our services by purchasing more credit.
+          But do not worry - you can continue using our services by purchasing more credit.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -57,7 +57,7 @@ export const InsufficientCreditsModal = () => {
             className="w-full bg-purple-100 text-dark-400"
             onClick={() => router.push("/profile")}
           >
-            Não, cancelar
+            Não, Cancel
           </AlertDialogCancel>
           <AlertDialogAction
             className="w-full bg-cover"

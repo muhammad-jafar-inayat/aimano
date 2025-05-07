@@ -28,7 +28,7 @@ export async function getUserById(userId: string) {
     
     let user = await User.findOne({ clerkId: userId });
 
-    // If user doesn't exist in MongoDB but exists in Clerk, create them
+    // If user does not exist in MongoDB but exists in Clerk, create them
     if (!user && userId) {
       console.log("User not found in MongoDB. Creating user from Clerk data...");
       

@@ -28,22 +28,22 @@ export const DeleteConfirmation = ({ imageId }: { imageId: string }) => {
           className=""
           variant="destructive"
         >
-          Excluir imagem
+          Delete image
         </Button>
       </AlertDialogTrigger>
 
       <AlertDialogContent className="flex flex-col gap-10">
         <AlertDialogHeader>
           <AlertDialogTitle>
-          Tem certeza de que quer apagar essa imagem?
+          Are you sure you want to delete this image?
           </AlertDialogTitle>
           <AlertDialogDescription className="p-16-regular">
-          Isto irá excluir permanentemente esta imagem
+          This will permanently delete this image
           </AlertDialogDescription>
         </AlertDialogHeader>
 
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancelar</AlertDialogCancel>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
           <AlertDialogAction
             className="border bg-red-500 text-white hover:bg-red-600"
             onClick={() =>
@@ -52,7 +52,7 @@ export const DeleteConfirmation = ({ imageId }: { imageId: string }) => {
               })
             }
           >
-            {isPending ? "Excluindo..." : "Excluir"}
+            {isPending ? "Excluindo..." : "Delete"}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

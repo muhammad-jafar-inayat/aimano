@@ -1,10 +1,9 @@
-# mano - SaaS image editing platform with AI
+# AI mano - SaaS image editing platform with AI
 
-https://github.com/cintra1/mano/assets/101955322/c6767160-09a7-4e69-8188-a2486cf144bd
 
 ## Introduction
 
-mano is a Software-as-a-Service (SaaS) application for image processing, integrating advanced AI features and a robust system for payments and credits. Built on Next.js 14 as the primary framework, along with Cloudinary AI, Clerk, and Stripe, the application provides a comprehensive solution for manipulating and enhancing images, including image restoration, recoloring, object removal, generative filling, and background removal.
+ AI mano is a Software-as-a-Service (SaaS) application for image processing, integrating advanced AI features and a robust system for payments and credits. Built on Next.js 14 as the primary framework, along with Cloudinary AI, Clerk, and Stripe, the application provides a comprehensive solution for manipulating and enhancing images, including image restoration, recoloring, object removal, generative filling, and background removal.
 
 ## ⚙️ Technologies
 
@@ -53,7 +52,7 @@ mano is a Software-as-a-Service (SaaS) application for image processing, integra
 
 1. **Installation:**
 
-  - Clone this repository: `git clone https://github.com/cintra1/mano`
+  - Clone this repository: `git clone https://github.com/muhammad-jafar-inayat/mano`
   - Navigate to the project directory: `cd mano`
   - Install dependencies: `npm install`
   - 
@@ -67,5 +66,4 @@ mano is a Software-as-a-Service (SaaS) application for image processing, integra
   - Start the Next.js server: `npm run dev`
   - The application will be available at `http://localhost:3000`
 
-## License:
-This project is licensed under the MIT License. See the LICENSE file for details.
+

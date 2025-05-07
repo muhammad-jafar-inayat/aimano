@@ -15,7 +15,7 @@ export const navLinks = [
       icon: "/assets/icons/stars.svg",
     },
     {
-      label: "Remover Objeto",
+      label: "Remove Object",
       route: "/transformations/add/remove",
       icon: "/assets/icons/scan.svg",
     },
@@ -130,7 +130,7 @@ export const navLinks = [
     removeBackground: {
       type: "removeBackground",
       title: "Remove Background",
-      subTitle: "Remove o fundo da imagem utilizando a IA",
+      subTitle: "Remove image background using AI",
       config: { removeBackground: true },
       icon: "camera.svg",
     },
@@ -143,8 +143,8 @@ export const navLinks = [
     },
     remove: {
       type: "remove",
-      title: "Remover Objeto",
-      subTitle: "Save imageIdentify and eliminate the object from the image",
+      title: "Remove Object",
+      subTitle: "Save image Identity and eliminate the object from the image",
       config: {
         remove: { prompt: "", removeShadow: true, multiple: true },
       },
@@ -153,7 +153,7 @@ export const navLinks = [
     recolor: {
       type: "recolor",
       title: "Recolor Object",
-      subTitle: "Identifica e recolore o objeto da imagem",
+      subTitle: " recolor the object in the image",
       config: {
         recolor: { prompt: "", to: "", multiple: true },
       },
@@ -164,19 +164,19 @@ export const navLinks = [
   export const aspectRatioOptions = {
     "1:1": {
       aspectRatio: "1:1",
-      label: "Quadrado (1:1)",
+      label: "Square (1:1)",
       width: 1000,
       height: 1000,
     },
     "3:4": {
       aspectRatio: "3:4",
-      label: "Retrato padrão (3:4)",
+      label: "Standard Portrait (3:4)",
       width: 1000,
       height: 1334,
     },
     "9:16": {
       aspectRatio: "9:16",
-      label: "Retrato celular (9:16)",
+      label: "Cell portrait (9:16)",
       width: 1000,
       height: 1778,
     },
