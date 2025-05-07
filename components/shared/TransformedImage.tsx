@@ -22,7 +22,7 @@ const TransformedImage = ({ image, type, title, transformationConfig, isTransfor
     <div className="flex flex-col gap-4">
       <div className="flex-between">
         <h3 className="h3-bold text-purple-500">
-         Resultado
+         Result
         </h3>
 
         {hasDownload && (
@@ -70,13 +70,13 @@ const TransformedImage = ({ image, type, title, transformationConfig, isTransfor
                 height={50}
                 alt="spinner"
               />
-              <p className="text-white/80">Aguarde...</p>
+              <p className="text-white/80">Wait...</p>
             </div>
           )}
         </div>
       ): (
         <div className="transformed-placeholder">
-          Imagem Transformada
+          Transformed Image
         </div>
       )}
     </div>

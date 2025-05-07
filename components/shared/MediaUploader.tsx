@@ -31,8 +31,8 @@ const MediaUploader = ( { onValueChange, setImage, image, publicId, type }: Medi
         onValueChange(result?.info.public_id)
 
         toast({
-            title: 'Imagem carregada com sucesso!',
-            description: '1 crédito foi gasto da sua conta.',
+            title: 'Image uploaded successfully!',
+            description: '1 credit has been spent from your account.',
             duration: 5000,
             className: 'success-toast'
         })
@@ -40,8 +40,8 @@ const MediaUploader = ( { onValueChange, setImage, image, publicId, type }: Medi
 
     const onUploadErrorHandler = () => {
         toast({
-            title: 'Ocorreu algum erro durante o carregamento!',
-            description: 'Tente novamente.',
+            title: 'An error occurred while loading!',
+            description: 'Please try again.',
             duration: 5000,
             className: 'error-toast'
         })
@@ -49,7 +49,7 @@ const MediaUploader = ( { onValueChange, setImage, image, publicId, type }: Medi
 
   return (
       <CldUploadWidget
-          uploadPreset='jsm_ailu'
+          uploadPreset='jsm_mano'
           options={{
               multiple: false,
               resourceType: 'image',
@@ -84,7 +84,7 @@ const MediaUploader = ( { onValueChange, setImage, image, publicId, type }: Medi
                                       width={24} height={24} />
                                  
                               </div>
-                              <p className='p-14-medium'>Clique aqui para carregar uma imagem</p>
+                              <p className='p-14-medium'>Click here to upload an image</p>
                           </div>
                   )}
               </div>

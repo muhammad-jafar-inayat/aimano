@@ -12,18 +12,32 @@ export function cn(...inputs: ClassValue[]) {
 
 // ERROR HANDLER
 export const handleError = (error: unknown) => {
+  // Special case for Next.js redirects - not an actual error
+  if (error instanceof Error && error.message.includes("NEXT_REDIRECT")) {
+    // This is not actually an error, but how Next.js handles redirects
+    // Just rethrow it so Next.js can handle it
+    throw error;
+  }
+
   if (error instanceof Error) {
     // This is a native JavaScript error (e.g., TypeError, RangeError)
     console.error(error.message);
+    
+    // Add this conditional to handle "User not found" errors gracefully
+    if (error.message === "User not found") {
+      console.warn("User not found in database. This is expected during initial setup.");
+      // Return instead of throwing
+      return;
+    }
+    
     throw new Error(`Error: ${error.message}`);
   } else if (typeof error === "string") {
     // This is a string error message
     console.error(error);
     throw new Error(`Error: ${error}`);
   } else {
-    // This is an unknown type of error
-    console.error(error);
-    throw new Error(`Unknown error: ${JSON.stringify(error)}`);
+    console.error("Unknown error:", error);
+    throw new Error("Unknown error occurred");
   }
 };
 

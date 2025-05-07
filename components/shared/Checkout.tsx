@@ -4,8 +4,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useEffect } from "react";
 
 import { useToast } from "@/components/ui/use-toast";
-import { checkoutCredits } from "@/lib/actions/transaction.action";
-
+import { checkoutCredits } from "@/lib/actions/client-actions";
 import { Button } from "../ui/button";
 
 const Checkout = ({
@@ -26,12 +25,11 @@ const Checkout = ({
   }, []);
 
   useEffect(() => {
-    // Check to see if this is a redirect back from Checkout
     const query = new URLSearchParams(window.location.search);
     if (query.get("success")) {
       toast({
-        title: "Compra efectuada!",
-        description: "Você receberá um e-mail de confirmação",
+        title: "Purchase made!",
+        description: "You will receive a confirmation email shortly.",
         duration: 5000,
         className: "success-toast",
       });
@@ -39,8 +37,8 @@ const Checkout = ({
 
     if (query.get("canceled")) {
       toast({
-        title: "Compra cancelada!",
-        description: "Continue a fazer as suas compras e faça o check-out quando estiver pronto",
+        title: "Purchase canceled!",
+        description: "You can try again later.",
         duration: 5000,
         className: "error-toast",
       });
@@ -48,38 +46,14 @@ const Checkout = ({
   }, []);
 
   const onCheckout = async () => {
-    const transaction = {
-      plan,
-      amount,
-      credits,
-      buyerId,
-    };
-
+    const transaction = { plan, amount, credits, buyerId };
     await checkoutCredits(transaction);
   };
 
   return (
-   <>
-      <a href="https://forms.gle/bJXbv1KwZacwfiPe8">
-                  <Button className="w-full mb-2">
-                  Comprar créditos
-                  </Button>
-        </a>
-        {/* 
-        <form action={onCheckout} method="POST">
-      <section>
-        <Button
-          type="submit"
-          role="link"
-          className="w-full"
-          disabled
-        >
-          Comprar créditos
-        </Button> 
-       </section>
-    </form>
-  */}
-    </>
+    <Button onClick={onCheckout} className="w-full">
+      Buy credits
+    </Button>
   );
 };
 

@@ -107,7 +107,7 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
       secure: true,
     })
 
-    let expression = 'folder=ailu';
+    let expression = 'folder=mano';
 
     if (searchQuery) {
       expression += ` AND resource_type=image AND (tags=${searchQuery} OR context.title=${searchQuery})`;
@@ -157,6 +157,7 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
 }
 
 // GET IMAGES BY USER
+// GET IMAGES BY USER
 export async function getUserImages({
   limit = 9,
   page = 1,
@@ -171,60 +172,38 @@ export async function getUserImages({
   try {
     await connectToDatabase();
 
+    console.log("Getting images for user ID:", userId);
+    
     const skipAmount = (Number(page) - 1) * limit;
 
-    cloudinary.config({
-      cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-      api_key: process.env.CLOUDINARY_API_KEY,
-      api_secret: process.env.CLOUDINARY_API_SECRET,
-      secure: true,
-    })
-    let expression = 'folder=ailu';
-
+    // Create the query with author ID
+    let query: any = { author: userId };
+    
+    // Add search query if provided
     if (searchQuery) {
-      expression += ` AND resource_type=image AND (tags=${searchQuery} OR context.title=${searchQuery})`;
-    } else {
-      expression += ' AND resource_type=image';
+      query.title = { $regex: searchQuery, $options: 'i' };
     }
 
-    const { resources } = await cloudinary.search
-      .expression(expression)
-      .execute();
+    // Find images directly from MongoDB without Cloudinary dependency
+    const images = await populateUser(
+      Image.find(query)
+    )
+    .sort({ updatedAt: -1 })
+    .skip(skipAmount)
+    .limit(limit);
 
-      const resourceIds = resources.map((resource: any) => resource.public_id);
-
-      let query = {};
-  
-      if(searchQuery) {
-        query = {
-          $or: [
-            { publicId: { $in: resourceIds } },
-            { title: { $regex: searchQuery, $options: 'i' } }
-          ]
-        }
-      } else {
-        query = {
-          publicId: { $in: resourceIds }
-        };
-      }
-  
-
-      const images = await populateUser(
-        Image.find({ author: userId, ...query }) // Adicione a condição do userId aqui
-      )
-      .sort({ updatedAt: -1 })
-      .skip(skipAmount)
-      .limit(limit);
-
+    // Count total images matching the query
     const totalImages = await Image.find(query).countDocuments();
-    const savedImages = await Image.find().countDocuments();
+    
+    console.log(`Found ${images.length} images for user ${userId}`);
 
     return {
       data: JSON.parse(JSON.stringify(images)),
       totalPage: Math.ceil(totalImages / limit),
-      savedImages,
+      savedImages: totalImages,
     };
   } catch (error) {
+    console.error("Error getting user images:", error);
     handleError(error);
   }
 }

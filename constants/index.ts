@@ -5,12 +5,12 @@ export const navLinks = [
       icon: "/assets/icons/home.svg",
     },
     {
-      label: "Restauração de Imagem",
+      label: "Image Restoration",
       route: "/transformations/add/restore",
       icon: "/assets/icons/image.svg",
     },
     {
-      label: "Preenchimento Generativo",
+      label: "Generative Fill",
       route: "/transformations/add/fill",
       icon: "/assets/icons/stars.svg",
     },
@@ -20,22 +20,22 @@ export const navLinks = [
       icon: "/assets/icons/scan.svg",
     },
     {
-      label: "Recolorir Objeto",
+      label: "Recolor Object",
       route: "/transformations/add/recolor",
       icon: "/assets/icons/filter.svg",
     },
     {
-      label: "Remover Fundo",
+      label: "Remove Background",
       route: "/transformations/add/removeBackground",
       icon: "/assets/icons/camera.svg",
     },
     {
-      label: "Perfil",
+      label: "profile",
       route: "/profile",
       icon: "/assets/icons/profile.svg",
     },
     {
-      label: "Comprar Créditos",
+      label: "Buy Credits",
       route: "/credits",
       icon: "/assets/icons/bag.svg",
     },
@@ -44,75 +44,75 @@ export const navLinks = [
   export const plans = [
     {
       _id: 1,
-      name: "Gratuito",
+      name: "Free",
       icon: "/assets/icons/free-plan.svg",
       price: 0,
       credits: 0,
       inclusions: [
         {
-          label: "Acesso básico",
+          label: "Basic access",
           isIncluded: true,
         },
         {
-          label: "Planos limitados",
+          label: "Limited plans",
           isIncluded: true,
         },
         {
-          label: "Suporte Prioritário",
+          label: "Priority Support",
           isIncluded: false,
         },
         {
-          label: "Prioridade nas Atualizações",
+          label: "Priority in Updates",
           isIncluded: false,
         },
       ],
     },
     {
       _id: 2,
-      name: "Pacote Pro",
+      name: "Pro Package",
       icon: "/assets/icons/free-plan.svg",
       price: 7.50,
       credits: 10,
       inclusions: [
         {
-          label: "10 Créditos",
+          label: "10 Credits",
           isIncluded: true,
         },
         {
-          label: "Acesso Completo aos Serviços",
+          label: "Full Access to Services",
           isIncluded: true,
         },
         {
-          label: "Suporte Prioritário",
+          label: "Priority Support",
           isIncluded: true,
         },
         {
-          label: "Prioridade nas Atualizações",
+          label: "Priority in Updates",
           isIncluded: false,
         },
       ],
     },
     {
       _id: 3,
-      name: "Pacote Premium",
+      name: "Premium Package",
       icon: "/assets/icons/free-plan.svg",
       price: 37.50,
       credits:  50,
       inclusions: [
         {
-          label: "50 Créditos",
+          label: "50credits",
           isIncluded: true,
         },
         {
-          label: "Acesso Completo aos Serviços",
+          label: "Full Access to Services",
           isIncluded: true,
         },
         {
-          label: "Suporte Prioritário",
+          label: "Priority Support",
           isIncluded: true,
         },
         {
-          label: "Prioridade nas Atualizações",
+          label: "Priority in Updates",
           isIncluded: true,
         },
       ],
@@ -122,29 +122,29 @@ export const navLinks = [
   export const transformationTypes = {
     restore: {
       type: "restore",
-      title: "Restauração de Imagem",
-      subTitle: "Aperfeiçoa imagens removendo ruído e imperfeições",
+      title: "Image Restoration",
+      subTitle: "Perfects images by removing noise and imperfections",
       config: { restore: true },
       icon: "image.svg",
     },
     removeBackground: {
       type: "removeBackground",
-      title: "Remover Fundo",
+      title: "Remove Background",
       subTitle: "Remove o fundo da imagem utilizando a IA",
       config: { removeBackground: true },
       icon: "camera.svg",
     },
     fill: {
       type: "fill",
-      title: "Preenchimento Generativo",
-      subTitle: "Muda as dimensões de uma imagem utilizando a pintura com IA",
+      title: "Generative Fill",
+      subTitle: "Change the dimensions of an image using AI painting",
       config: { fillBackground: true },
       icon: "stars.svg",
     },
     remove: {
       type: "remove",
       title: "Remover Objeto",
-      subTitle: "Identifica e elimina o objeto da imagem",
+      subTitle: "Save imageIdentify and eliminate the object from the image",
       config: {
         remove: { prompt: "", removeShadow: true, multiple: true },
       },
@@ -152,7 +152,7 @@ export const navLinks = [
     },
     recolor: {
       type: "recolor",
-      title: "Recolorir Objeto",
+      title: "Recolor Object",
       subTitle: "Identifica e recolore o objeto da imagem",
       config: {
         recolor: { prompt: "", to: "", multiple: true },

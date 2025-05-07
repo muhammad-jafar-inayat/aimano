@@ -45,11 +45,11 @@ export const InsufficientCreditsModal = () => {
           />
 
           <AlertDialogTitle className="p-24-bold text-purple-500">
-          Oops.... Você não tem créditos disponíveis!
+          Oops.... You have no available credits!
           </AlertDialogTitle>
 
           <AlertDialogDescription className="p-16-regular py-3">
-          Mas não se preocupe - você pode continuar usando nossos serviços comprando mais créditos.
+          But don't worry - you can continue using our services by purchasing more credit.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -63,7 +63,7 @@ export const InsufficientCreditsModal = () => {
             className="w-full bg-cover"
             onClick={() => router.push("/credits")}
           >
-            Sim, prosseguir
+            Yes, proceed to checkout
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

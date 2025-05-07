@@ -202,7 +202,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
         <CustomField 
           control={form.control}
           name="title"
-          formLabel="Título da imagem"
+          formLabel="Image title"
           className="w-full"
           render={({ field }) => <Input {...field} className="input-field" />}
         />
@@ -211,7 +211,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
           <CustomField
             control={form.control}
             name="aspectRatio"
-            formLabel="Tamanho da Imagem"
+            formLabel="Image Size"
             className="w-full"
             render={({ field }) => (
               <Select
@@ -219,7 +219,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
                 value={field.value}
               >
                 <SelectTrigger className="select-field">
-                  <SelectValue placeholder="Selecionar Tamanho" />
+                  <SelectValue placeholder="Select Size" />
                 </SelectTrigger>
                 <SelectContent>
                   {Object.keys(aspectRatioOptions).map((key) => (
@@ -239,7 +239,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
               control={form.control}
               name="prompt"
               formLabel={
-                type === 'remove' ? 'Objeto para remover' : 'Objeto para recolorir'
+                type === 'remove' ? 'Object to remove' : 'Object to recolor'
               }
               className="w-full"
               render={({ field }) => (
@@ -260,7 +260,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
               <CustomField 
                 control={form.control}
                 name="color"
-                formLabel="Cor para substituição"
+                formLabel="Replacement color"
                 className="w-full"
                 render={({ field }) => (
                   <Input 
@@ -312,14 +312,14 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
             disabled={isTransforming || newTransformation === null}
             onClick={onTransformHandler}
           >
-            {isTransforming ? 'Transformando...' : 'Aplicar Transformação'}
+            {isTransforming ? 'Transformando...' : 'Apply Transformation'}
           </Button>
           <Button 
             type="submit"
             className=""
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Enviando...' : 'Salvar Imagem'}
+            {isSubmitting ? 'Enviando...' : 'Save image'}
           </Button>
         </div>
       </form>

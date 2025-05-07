@@ -49,7 +49,7 @@ export const Collection = ({
   return (
     <>
       <div className="collection-heading">
-        <h2 className="h2-bold text-purple-500">Imagens recentes</h2>
+        <h2 className="h2-bold text-purple-500">Recent Images</h2>
         {hasSearch && <Search />}
       </div>
 
@@ -61,7 +61,7 @@ export const Collection = ({
         </ul>
       ) : (
         <div className="collection-empty">
-          <p className="p-20-semibold">Lista vazia</p>
+          <p className="p-20-semibold">Empty list</p>
         </div>
       )}
 

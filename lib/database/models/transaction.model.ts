@@ -1,31 +1,14 @@
-import { Schema, model, models } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const TransactionSchema = new Schema({
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-  stripeId: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  amount: {
-    type: Number,
-    required: true,
-  },
-  plan: {
-    type: String,
-  },
-  credits: {
-    type: Number,
-  },
-  buyer: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
-  },
+  buyerId: { type: String, required: true },
+  amount: { type: Number, required: true },
+  credits: { type: Number, required: true },
+  plan: { type: String, required: true },
+  status: { type: String, default: 'pending' },
+  createdAt: { type: Date, default: Date.now }
 });
 
-const Transaction = models?.Transaction || model("Transaction", TransactionSchema);
+const Transaction = mongoose.models.Transaction || mongoose.model("Transaction", TransactionSchema);
 
 export default Transaction;

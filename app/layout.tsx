@@ -4,7 +4,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
-  title: "Ailu",
+  title: "mano",
   description: "AI-powered image generator"
 };
 

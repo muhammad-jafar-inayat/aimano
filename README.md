@@ -1,10 +1,10 @@
-# Ailu - SaaS image editing platform with AI
+# mano - SaaS image editing platform with AI
 
-https://github.com/cintra1/ailu/assets/101955322/c6767160-09a7-4e69-8188-a2486cf144bd
+https://github.com/cintra1/mano/assets/101955322/c6767160-09a7-4e69-8188-a2486cf144bd
 
 ## Introduction
 
-Ailu is a Software-as-a-Service (SaaS) application for image processing, integrating advanced AI features and a robust system for payments and credits. Built on Next.js 14 as the primary framework, along with Cloudinary AI, Clerk, and Stripe, the application provides a comprehensive solution for manipulating and enhancing images, including image restoration, recoloring, object removal, generative filling, and background removal.
+mano is a Software-as-a-Service (SaaS) application for image processing, integrating advanced AI features and a robust system for payments and credits. Built on Next.js 14 as the primary framework, along with Cloudinary AI, Clerk, and Stripe, the application provides a comprehensive solution for manipulating and enhancing images, including image restoration, recoloring, object removal, generative filling, and background removal.
 
 ## ⚙️ Technologies
 
@@ -53,8 +53,8 @@ Ailu is a Software-as-a-Service (SaaS) application for image processing, integra
 
 1. **Installation:**
 
-  - Clone this repository: `git clone https://github.com/cintra1/ailu`
-  - Navigate to the project directory: `cd ailu`
+  - Clone this repository: `git clone https://github.com/cintra1/mano`
+  - Navigate to the project directory: `cd mano`
   - Install dependencies: `npm install`
   - 
 2. **Configuration:**

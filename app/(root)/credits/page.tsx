@@ -18,30 +18,30 @@ const Credits = async () => {
   return (
     <>
       <Header
-        title="Comprar Créditos"
-        subtitle="Escolha um pacote de crédito adequado às suas necessidades!"
+        title="Buy Credits"
+        subtitle="Choose a credit package that fits your needs!!"
       />
 
       <section>
         <ul className="credits-list">
           {plans.map((plan) => (
             <li key={plan.name} className="credits-item">
-              {plan.name === "Gratuito" ? (
+              {plan.name === "Free" ? (
                 <div className="flex-center flex-col gap-3">
                   <Image src={plan.icon} alt="check" width={50} height={50} />
                   <p className="p-20-semibold mt-2 text-purple-500">
                     {plan.name}
                   </p>
-                  <p className="h1-semibold text-dark-600">R$ {plan.price}</p>
-                  <p className="p-16-regular">1 a 5 Créditos</p>
+                  <p className="h1-semibold text-dark-600">${plan.price}</p>
+                  <p className="p-16-regular">1 to 5  Credits</p>
                 </div>) : (
                 <div className="flex-center flex-col gap-3">
                   <Image src={plan.icon} alt="check" width={50} height={50} />
                   <p className="p-20-semibold mt-2 text-purple-500">
                     {plan.name}
                   </p>
-                  <p className="h1-semibold text-dark-600">R$ {plan.price}</p>
-                  <p className="p-16-regular">{plan.credits} Créditos</p>
+                  <p className="h1-semibold text-dark-600">${plan.price}</p>
+                  <p className="p-16-regular">{plan.credits}credits</p>
                 </div>)}
 
               {/* Inclusions */}
@@ -64,10 +64,10 @@ const Credits = async () => {
                 ))}
               </ul>
 
-              {plan.name === "Gratuito" ? (
-                <a href="https://forms.gle/UpSpX24VkrTNziZW6">
+              {plan.name === "Free" ? (
+                <a href="https://forms.gle/4yGQPrkH8kqh8vxaA">
                   <Button variant="outline" className="w-full">
-                  Pedir créditos gratuitos
+                  Request Free Credits
                   </Button>
                 </a>
               ) : (

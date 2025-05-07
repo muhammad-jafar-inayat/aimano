@@ -46,7 +46,7 @@ export const Search = () => {
 
       <Input
         className="search-field"
-        placeholder="Pesquisar"
+        placeholder="search name here...."
         onChange={(e) => setQuery(e.target.value)}
       />
     </div>
